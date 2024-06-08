@@ -1,0 +1,17 @@
+
+@media screen and (max-width: 768px) {
+    #form{
+        width: 90% !important; 
+        padding: 1rem !important;
+    }
+    #searchBtn{
+        width: 50% !important;
+    }
+}  
+@media screen and (max-width: 500px) {
+    #form{
+        width: 100% !important; 
+    }
+
+}
+

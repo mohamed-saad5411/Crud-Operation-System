@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Project</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/rwd.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="bg-dark p-4">
+        <div class="container overflow-auto w-100">
+            <button onclick="doLightMood()" id="lightMood" class="btn btn-light btn-sm position-fixed"><i class="fa-regular fa-lightbulb "></i></button>
+            <button onclick="doDarkMood()" id="darktMood" class="btn btn-dark btn-sm position-fixed d-none"><i class="fa-solid fa-moon text-white"></i></button>
+            <h1 class="text-center my-3 text-info fw-bolder">PRODUCT MANAGEMENT SYSTEM </h1>
+            <div id="form" class="w-75 m-auto p-5 rounded-3  my-5">
+
+                <label class="mb-2 text-white-50 fw-semibold" for="productName">Product Name : <span id="alertName" class="ps-5 text-danger fw-lighter d-none">*(Must be more than 2 charachters and less than 50 charachters)</span></label>
+                <input class="form-control mb-4 text-muted" placeholder="Enter Product Name..." type="text"
+                    id="productName">
+
+                <label class="mb-2 text-white-50 fw-semibold" for="productPrice">Product Price :<span class="ps-5 text-danger fw-lighter d-none" id="alertPrice">*(Must be less than 100k EGP)</span></label>
+                <input class="form-control mb-4 text-muted" placeholder="Enter Product Price..." type="number"
+                    id="productPrice">
+
+                <label class="mb-2 text-white-50 fw-semibold" for="productCategory">Product Category :<span class="ps-5 text-danger fw-lighter d-none" id="alertCat">*(Must be more than 2 charachters and less than 50 charachters)</span></label>
+                <input class="form-control mb-4 text-muted" placeholder="Enter Product Category..." type="text"
+                    id="productCategory">
+
+                <label class="mb-2 text-white-50 fw-semibold" for="productDescription">Product Description :<span class="ps-5 text-danger fw-lighter d-none" id="alertDesc">*(Must be more than 2 charachters and less than 50 charachters)</span></label>
+                <textarea class="form-control mb-4 text-muted" placeholder="Enter Product Description..." type="text"
+                    id="productDescription"></textarea>
+
+                <button class="btn btn-outline-info w-100 " id="addProductBtn" onclick="addProduct()">Add Product</button>
+                <button class="btn btn-outline-warning w-100 d-none" id="updateProductBtn" onclick="updateProduct()">Update Product</button>
+
+            </div>
+
+            <input oninput="searchByName(this.value)" id="searchBtn" type="text" class="form-control w-25 m-auto my-5" placeholder="Search ...">
+
+            <table class="table rounded-3 text-center">
+                <thead class="text-black fw-bolder">
+                    <th class="ps-2 py-4">Index</th>
+                    <th class="py-4">Product Name</th>
+                    <th class="py-4">Price</th>
+                    <th class="py-4">Category</th>
+                    <th class="py-4">Description</th>
+                    <th class="py-4">Update Product</th>
+                    <th class="pe-2 py-4">Delete Product</th>
+                </thead>
+                <tbody id="data" class="text-white-50">
+                </tbody>
+            </table>
+
+
+        </div>
+    </section>
+
+
+
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

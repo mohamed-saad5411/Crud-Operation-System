@@ -1,0 +1,10 @@
+h1 {
+    font-family: "Roboto Slab", serif;
+}
+
+textarea{
+    resize: none;
+}
+#lightMood ,#darktMood{
+    right: 5%;
+}
